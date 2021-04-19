@@ -1,0 +1,21 @@
+.consult{
+    padding: 100px 0 92px 0;
+    min-height: 680px;
+    background: url(/images/background/backgroun_shoes.jpg) center (center/cover) no-repeat;
+    .title{
+        &_left{
+            font-size: 36px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+    }
+    &__descr{
+        width: 400px;
+        margin-top: 80px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #ffffff;
+    }
+    
+}
