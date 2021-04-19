@@ -1,0 +1,94 @@
+@media (max-width:1200px) {
+    .container{
+        max-width: 830px;
+    }
+}
+@media (max-width: 991px) {
+    .container{
+        max-width: 768px;
+    }
+    .promo{
+        .header{
+            justify-content: space-around;
+        }
+        &__wrapper {
+            align-items: center;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .promo{
+        min-height: 600px;
+        .header{
+            justify-content: space-around;
+            &__official{
+                display: none;
+            }
+        }
+        &__wrapper {
+            margin-top: 50px;
+            align-items: center;
+        }
+        &_header {
+            font-size: 30px;
+            line-height: 10px;
+        }
+        &__subheader {
+            margin-top: 17px;
+            font-size: 20px;
+        }
+    }
+    .advantage{
+        padding: 20px 0 20px 0;
+        &__icons{
+            margin-top: 10px;
+            flex-direction: column;
+            align-items:center;
+        }
+        &_header {
+            font-size: 20px;
+        }
+        &_descr{
+            margin-top: 20px;
+        }
+        &_text{
+            margin-top: 5px;
+        }
+     }
+}
+@media (max-width: 575px) {
+    .promo{
+        .header{
+            flex-direction: column;
+            justify-content: center;
+            &__official{
+                margin-top: 15px;
+                display: flex;
+                align-items:center;
+            }
+            &__contacts{
+                margin-top: 20px;
+            }
+         }
+         &__wrapper{
+			 margin-top: 35px;
+            .promo_header{
+                font-size: 20px;
+             }
+			.promo__subheader{
+					margin-top: 10;
+                    font-size: 12px;
+                }
+            .promo__icons{
+				margin-top: 20px;
+				width: 280px;
+			}
+			.buttons_main{
+				margin-top: 30px;
+				width: 270px;
+			}
+         }
+    }
+}
+
+
