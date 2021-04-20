@@ -4,7 +4,7 @@
 	}
   }
   
-  @media (max-width: 991px) {
+@media (max-width: 991px){
 	.container {
 	  max-width: 700px;
 	}
@@ -32,9 +32,28 @@
   
 	  &_text {
 		font-size: 11px;
-	  }
+	    }
 	}
-  }
+	.consult{
+		padding: 40px 0 40px 0;
+		text-align: center;
+		.title{
+			&_left{
+				font-size: 25px;
+			}
+		}
+		&__descr{
+			font-size: 20px;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+		.feed-form{
+			padding-top: 50px;
+			margin: 0 auto;
+		}
+	}
+}
 @media (max-width: 767px) {
     .promo{
         min-height: 600px;
@@ -74,6 +93,8 @@
             margin-top: 5px;
         }
     }
+
+
 }
 @media (max-width: 575px) {
     .promo{

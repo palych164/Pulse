@@ -71,3 +71,74 @@
 
 
 // logging(6, 4);
+
+
+// 1 способ slick
+
+
+
+// $(document).ready(function(){
+//     $('.carousel__inner').slick({
+//         speed: 1200,
+//         // adaptiveHeight: true,
+//         prevArrow: '<button type="button" class="slick-prev"><img src="icons/chevron_left.png"></button>',
+//         nextArrow: '<button type="button" class="slick-next"><img src="icons/chevron_right.png"></button>',
+//         responsive: [
+//             {
+//                 breakpoint: 768,
+//                 settings: {
+//                   dots: true,
+//                   arrows: false
+//                 }
+//             }
+//         ]
+//       });
+//   });
+
+//  "2  способ через Tiny slider"
+
+const slider = tns({
+    container: '.carousel__inner',
+    items: 1,
+    slideBy: 'page',
+    controls: false,
+    nav: false,
+    responsive: {
+        640: {
+          edgePadding: 20,
+          gutter: 20,
+          items: 1
+        },
+    }
+  });
+  document.querySelector('.next').addEventListener('click', function () {
+    slider.goTo('next');
+  })
+  document.querySelector('.prev').addEventListener('click', function () {
+    slider.goTo('prev');
+  })
+
+
+
+
+
+//   var slider = tns({
+//     container: '.my-slider',
+//     items: 1,
+//     responsive: {
+//       640: {
+//         edgePadding: 20,
+//         gutter: 20,
+//         items: 2
+//       },
+//       700: {
+//         gutter: 30
+//       },
+//       900: {
+//         items: 3
+//       }
+//     }
+//   });
+  
+
+// 3 способ Bootsrap
