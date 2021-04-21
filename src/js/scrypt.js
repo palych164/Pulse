@@ -129,13 +129,73 @@ function toggleSlide(item) {
             e.preventDefault();
             $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
             $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
-        })
+        });
     });
-};
+}
 
 toggleSlide('.catalog-item__link');
 toggleSlide('.catalog-item__back');
+
+// Modals
+  // consult modal
+  $('[data-modal=consultation]').on('click', function() {
+      $('.overlay, #consultation').fadeIn();
+  });
+  // close function
+  $('.modal__close').on('click', function() {
+      $('.overlay, #consultation, #thanks, #order').fadeOut();
+  });
+  // make order modal
+  $('.buttons_mini').each(function(i) {
+    $(this).on('click', function() {
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+      $('.overlay, #order').fadeIn();     
+    });
+  });
+
+
+//   forms validation
+
+  function validateForms(form){
+	$(form).validate({
+		rules:{
+			name: {
+				required: true,
+				minlength: 2
+			  },
+			phone: {
+				required: true,
+				minlength:10
+			},
+			email: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+		  name: "минимум две буквы ставь",
+		  phone: {
+			  required: 'telefon davay',
+			  minlength: jQuery.validator.format("stolko nado {0} stavit")
+		  },
+		  email: {
+			required: "мыло блять",
+			email: "нормальное мыло блять давай"
+		  }
+		}
+	});
+
+  };
+  validateForms('#consultation-form');
+  validateForms('#consultation form');
+  validateForms('#order form');
+
+
+	$('input[name=phone]').mask("+1(999) 999-9999");
+
 });
+
+
 
     
 

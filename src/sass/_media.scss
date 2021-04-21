@@ -18,6 +18,7 @@
           left: 0;
       }
   }
+
 }
 @media (max-width: 991px){
 	.container {
@@ -164,14 +165,20 @@
         }
     }
     .reviews{
+        .title{
+            font-size: 20px;
+        }
         &__item{
             img{
                 display: none;
             }
         }
     }
-
-
+    .footer{
+        &__info{
+            display: none;
+        }
+    }
 }
 @media (max-width: 575px) {
     .promo{
@@ -244,6 +251,12 @@
             flex-direction: column;
         }
     }
-}
+    .footer{
+        &__info{
+            display: none;
+        }
+    }
+} 
+
 
 
