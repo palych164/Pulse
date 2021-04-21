@@ -82,6 +82,7 @@
         }
     }
     .catalog {
+        padding-bottom: 40px;
         &__tab {
             width: 180px;
         }
@@ -94,6 +95,24 @@
         }
         &-item {
             width: 300px;
+        }
+    }
+    .reviews{
+        .container {
+            max-width: 580px;
+        }
+        &__item{
+            padding-top: 20px;
+            padding-bottom: 26px;
+            display: flex;   
+            align-items:center;
+            img{
+                width: 130px;
+                height: 130px;
+            }
+        }
+        &__text{
+            font-size: 13px;
         }
     }
 }
@@ -142,6 +161,13 @@
             height: 40px;
             font-size: 13px;
             line-height: 40px;
+        }
+    }
+    .reviews{
+        &__item{
+            img{
+                display: none;
+            }
         }
     }
 
